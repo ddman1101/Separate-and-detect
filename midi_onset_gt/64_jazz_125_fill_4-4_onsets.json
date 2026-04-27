@@ -1,0 +1,17 @@
+{
+  "Acoustic Snare": [
+    0.304,
+    0.364,
+    0.436
+  ],
+  "Closed Hi Hat": [
+    0.439
+  ],
+  "High Tom": [
+    0.773
+  ],
+  "High Floor Tom": [
+    1.268,
+    1.431
+  ]
+}

@@ -1,0 +1,45 @@
+# ==== Python ====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.env
+.venv/
+
+# ==== OS / IDE ====
+.DS_Store
+.idea/
+.vscode/
+
+# ==== Conda (local) ====
+miniconda3/
+
+# ==== Checkpoints / Models / Large binaries ====
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.tar
+*.tar.gz
+*.zip
+*.gz
+
+# ==== Project outputs ====
+lightning_logs/
+onset_evaluation_result*/
+onset_visualization_val/
+MSG-LD/outputs/
+
+# ==== Local datasets / artifacts (keep repo lightweight) ====
+old_data/
+drum_transcription_results/
+onset_evaluation_result_new_obtb/
+
+# ==== Misc ====
+__results__/
+*.ipynb_checkpoints/
+
+# ==== Other ====
+.mailmap

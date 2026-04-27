@@ -1,0 +1,15 @@
+name: onset_detect
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy==1.23.5
+  - scipy==1.10.1
+  - cython
+  - pip:
+      - librosa==0.11.0
+      - madmom
+      - pandas
+      - pathlib
