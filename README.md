@@ -1,6 +1,6 @@
 # Separate-and-Detect: Unified Drum Transcription and Stem Generation via Latent Diffusion
 
-The repository is for **Wei-Han Hsu, Chih-Cheng Chang, Bo-Yu Chen, Li Su, Yi-Hsuan Yang,
+The repository contains the code for **Wei-Han Hsu, Chih-Cheng Chang, Bo-Yu Chen, Li Su, Yi-Hsuan Yang,
 "Separate-and-detect: Unified drum transcription and stem generation via latent diffusion,"
 in Proc. Int. Society for Music Information Retrieval Conf. 2026 (ISMIR’26).**
 
