@@ -194,6 +194,6 @@ All the model checkpoints will be released upon acceptance.
 
 # Demo page
 
-The anonymous demo page is available at:
+The demo page is available at:
 
-[Demo Page](https://ismir26snd.github.io/demoSnD/)
+[Demo Page](https://ddman1101.github.io/Separate-and-Detect-demo/)
