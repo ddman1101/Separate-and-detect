@@ -1,5 +1,9 @@
 # Separate-and-Detect: Unified Drum Transcription and Stem Generation via Latent Diffusion
 
+The repository is for **Wei-Han Hsu, Chih-Cheng Chang, Bo-Yu Chen, Li Su, Yi-Hsuan Yang,
+"Separate-and-detect: Unified drum transcription and stem generation via latent diffusion,"
+in Proc. Int. Society for Music Information Retrieval Conf. 2026 (ISMIR’26).**
+
 # Abstract
 
 Automatic Drum Transcription (ADT) is commonly formulated as a direct mapping from a music mixture to symbolic drum events. While effective for transcription, this formulation discards the acoustic stems that are useful for editing, remixing, and production. We revisit an alternative separate-and-detect formulation, where a drum source separation front end first produces five editable drum stems, and a fixed onset detector then converts each stem into symbolic events. The separator is built on a five-stem latent diffusion model that jointly generates kick, snare, toms, hi-hats, and cymbals in a compact VAE latent space. We further study two training-only auxiliary branches-an onset branch (OB) and a timbre branch (TB)-which shape the separator during learning but are discarded at inference. Trained on synthetic drum multitracks and evaluated on MDB Drums and ENST-Drums, the proposed pipeline consistently improves over a strong U-Net-based drum separation baseline in overall transcription F1. It also outperforms a representative end-to-end ADT system on kick and snare F1 under our evaluation protocol, while additionally providing separated audio stems. The ablation results show that OB gives the most stable transcription gains, whereas TB changes the trade-off between reconstruction, perceptual stem quality, and onset detection. These results suggest that generative drum demixing can serve not only as a source separation model, but also as a practical front end for interpretable drum transcription.
@@ -190,7 +194,7 @@ Output transcripts are saved as `.txt`, one onset per line:
 
 # Checkpoint release
 
-All the model checkpoints will be released upon acceptance.
+It will release soon ...
 
 # Demo page
 
