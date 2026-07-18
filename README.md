@@ -112,7 +112,7 @@ wget https://zenodo.org/record/10643148/files/vae-ckpt.ckpt
 After placing these files in your preferred directory and updating their paths in the corresponding config, run the following to train MSG-LD:
 
 ```
-python inference_train.py --config config/MSG-LD/integrated_musicldm.yaml
+python integrated_train.py --config config/MSG-LD/integrated_musicldm.yaml
 ```
 
 # Config YAML
@@ -131,15 +131,20 @@ Common configs under `config/MSG-LD/` and when to use them:
   - Purpose: Adds both onset and timbre auxiliary branches (recommended for drums).
   - Use when: You want best downstream drum transcription with editable stems.
 
-- `inference_musicldm_mdb_inference.yaml`
+- `integrated_musicldm_mdb_inference.yaml`
   - Purpose: Inference/evaluation on the MDB-Drums dataset.
   - Use when: Running separation (and configured evaluation) on MDB splits.
   - Make sure: Dataset roots, checkpoint paths, and output dirs are correct.
 
-- `inference_musicldm_enst_inference.yaml`
+- `integrated_musicldm_enst_inference.yaml`
   - Purpose: Inference/evaluation on the ENST-Drums dataset.
   - Use when: Running separation (and configured evaluation) on ENST splits.
   - Make sure: Dataset roots, checkpoint paths, and output dirs are correct.
+
+- `integrated_musicldm_test_inference.yaml`
+  - Purpose: Single-audio separation on any music file.
+  - Use when: Running `--separate_only` inference on your own audio.
+  - Make sure: Input audio path, checkpoint path, and output dirs are correct.
 
 Example (training with onset+timbre):
 ```bash
@@ -157,11 +162,11 @@ conda activate musicldm_env
 
 # MDB-Drums inference/eval (config controls dataset split/paths/checkpoints)
 CUDA_VISIBLE_DEVICES=0 \
-python integrated_train.py --config config/MSG-LD/inference_musicldm_mdb_inference.yaml --separate_only
+python integrated_train.py --config config/MSG-LD/integrated_musicldm_mdb_inference.yaml --separate_only
 
 # ENST-Drums inference/eval
 CUDA_VISIBLE_DEVICES=0 \
-python integrated_train.py --config config/MSG-LD/inference_musicldm_enst_inference.yaml --separate_only
+python integrated_train.py --config config/MSG-LD/integrated_musicldm_enst_inference.yaml --separate_only
 
 # Single audio file separation (test inference) --> What ever music you like
 CUDA_VISIBLE_DEVICES=0 \
